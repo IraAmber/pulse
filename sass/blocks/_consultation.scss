@@ -1,0 +1,16 @@
+.consultation {
+    background: url("../img/bg2.png") center, (center/cover), no-repeat;
+    height: 680px;
+    padding: 100px 110px 108px 50px;
+    display: flex;
+    align-items: start;
+    &_descr {
+        max-width: 426px;
+        max-height: 61px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        color: #FFFFFF;
+        margin-top: 8px;
+    }
+}
