@@ -6,6 +6,93 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+    &_tab {
+        width: 220px;
+        height: 50px;
+        background: rgba(0, 0, 0, 0.0001);
+        border: 2px solid #D0D0D0; 
+        color: #6B6B6B;
+        font-weight: 400;
+        font-size: 18px;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 48px;
+        transform: skewX(-25deg);
+        margin: 0 5px;
+        cursor: pointer;
+        transition: 0.5s all;
+        &:hover {
+            border: none;
+            box-shadow: 3px 3px 20px $main-color;
+        }
+        div {
+            transform: skewX(25deg);
+        }
+        &_active {
+            color: #fff;
+            background-color: $main-color;
+            border: none;
+        }
+    }
+    &_content {
+        margin-top: 60px;
+        // display: none;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &_active{
+            display: flex;
+        }
+    }
+    &-item {
+        width: 303px;
+        height: 442px;
+        padding: 20px 20px 26px 20px;
+        background: #FFFFFF;
+        border: 2px solid #E8E8E8;
+        overflow: hidden;
+        margin-bottom: 20px;
+        &_img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: 200px;
+        }
+        &_subtitle {
+            font-weight: 700;
+            font-size: 16px;
+            text-align: center;
+            color: #0D0D0D;
+            margin-top: 15px;
+        }
+        &_descr {
+            margin-top: 15px;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            text-align: center;
+            color: #0D0D0D;
+        }
+        &_link {
+            display: block;
+            margin-top: 10px;
+            font-weight: 500;
+            font-size: 14px;
+            text-align: center;
+            text-decoration: underline;
+            color: $main-color;
+            text-transform: uppercase;
+            &:hover {
+                color: $main-color;
+            }
+        }
+        hr {
+            margin-top: 17px;
+            background: #E8E8E8;
+            margin-bottom: 21px;
+            border-bottom: none;
+        }
     }
 }
