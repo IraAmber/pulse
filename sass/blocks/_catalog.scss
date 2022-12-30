@@ -39,7 +39,7 @@
     }
     &_content {
         margin-top: 60px;
-        // display: none;
+        display: none;
         justify-content: space-between;
         flex-wrap: wrap;
         &_active{
@@ -47,10 +47,9 @@
         }
     }
     &-item {
-        width: 303px;
-        height: 442px;
+        width: 300px;
+        min-height: 440px;
         padding: 20px 20px 26px 20px;
-        background: #FFFFFF;
         border: 2px solid #E8E8E8;
         overflow: hidden;
         margin-bottom: 20px;
@@ -69,7 +68,6 @@
         }
         &_descr {
             margin-top: 15px;
-            font-style: normal;
             font-weight: 300;
             font-size: 14px;
             text-align: center;
@@ -93,6 +91,82 @@
             background: #E8E8E8;
             margin-bottom: 21px;
             border-bottom: none;
+        }
+        &_footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &_old-price {
+            font-weight: 300;
+            font-size: 14px;
+            text-decoration-line: line-through;
+            color: #555555;
+        }
+        &_price {
+            font-weight: 700;
+            font-size: 20px;
+            color: #050505;
+        }
+        &_wrapper {
+            display: flex;
+            width: calc(200% + 40px);
+        }
+        &_content {
+            width: 50%;
+            margin-right: 0px;
+            transform: translateX(-100%);
+            transition: 0.5s all;
+            &_active {
+                transform: translateX(0%);
+                margin-right: 20px;
+            }
+        }
+        &_list {
+            position: relative;
+            width: 50%;
+            margin-left: 20px;
+            transform: translateX(0%);
+            padding-right: 20px;
+            transition: 0.5s all;
+            padding-left: 19px;
+            margin-bottom: 0;
+            list-style: none;
+            &_active {
+                transform: translateX(-100%);
+                margin-left: 0;
+            }
+            li {
+                position: relative;
+                font-weight: 300;
+                font-size: 14px;
+                color: #555555;
+                margin-bottom: 20px;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 5px;
+                    height: 5px;
+                    background-color: $main-color;
+                    left: -14px;
+                    top: 7px;
+                }
+            }
+        }
+        &_back {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(calc(-50% - 19px));
+            display: block;
+            color: $main-color;
+            font-weight: 500;
+            font-size: 14px;
+            text-align: center;
+            text-decoration-line: underline;
+            &:hover {
+                color: $main-color;
+            }
         }
     }
 }
