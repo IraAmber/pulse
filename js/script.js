@@ -14,7 +14,7 @@ $(document).ready(function(){
             }
         ]
     });
-});
+
 
 $('ul.catalog_tabs').on('click', 'li:not(.catalog_tab_active)', function() {
     $(this)
@@ -116,4 +116,7 @@ $("a[href^='#']").click(function(){
     const _href = $(this).attr("href");
     $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
     return false;
+});
+
+new WOW().init();
 });
